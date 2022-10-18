@@ -27,10 +27,10 @@ public class B1193 {
                     System.out.println((X = count_sum) + "/" + (cross_count - (X - count_sum -1)));
                     break;
                 }
-            else {
-                count_sum += cross_count;
-                cross_count++;
-                }
+//            else {
+//                count_sum += cross_count;
+//                cross_count++;
+//                }
             }
         }
 
