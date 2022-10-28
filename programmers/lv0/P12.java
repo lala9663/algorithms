@@ -16,6 +16,11 @@ public class P12 {
 
         System.out.println(reverse);
 
+
+
+
+
+
 //        char[] input = numbers.toCharArray();
 //        char[] output = new char[input.length];
 //        int startIndex = 0;
