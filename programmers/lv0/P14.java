@@ -10,7 +10,7 @@ public class P14 {
         char[] charArray = my.toCharArray();
 
         for (int i = 0; i <charArray.length; i++) {
-
+            문제파악
         }
     }
 }
