@@ -1,16 +1,15 @@
 package programmers.lv0;
 
-import java.util.Scanner;
-
+// 세균 증식
 public class P14 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+    class Solution {
+        public int solution(int n, int t) {
+            int answer = 0;
 
-        String my = sc.nextLine();
-        char[] charArray = my.toCharArray();
+            double result = Math.pow(2, t);
+            answer = n * (int)result;
 
-        for (int i = 0; i <charArray.length; i++) {
-            문제파악
+            return answer;
         }
     }
 }

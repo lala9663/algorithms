@@ -1,6 +1,6 @@
-package programmers;
+package programmers.lv1;
 
-public class Lv1_1 {
+public class P01 {
     class Solution {
         public int solution(int n) {
             int answer = 0;
