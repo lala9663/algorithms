@@ -4,7 +4,7 @@ public class P02 {
     public int solution(int num1, int num2) {
         double answer = (double) num1 / num2;
         answer = answer * 1000;
-        int x = 0;
+        int y = 1;
         return (int)answer;
     }
 }
