@@ -6,7 +6,7 @@ public class Baek3003 {
     public static void main(String[] args) {
         int king = 1;
         int queen = 1;
-        int look = 3;
+        int look = 2;
         int night = 2;
         int bi = 2;
         int pone = 8;
