@@ -21,7 +21,7 @@ public class B10807 {
             }
         }
 
-        System.out.println(cnt);
+        System.out.println(cnt+1);
 
 
 
