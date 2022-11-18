@@ -22,6 +22,6 @@ public class B2562 {
                 index = count;
             }
         }
-        System.out.println(max + "\n" + index);
+        System.out.println(max + "\n " + index);
     }
 }
