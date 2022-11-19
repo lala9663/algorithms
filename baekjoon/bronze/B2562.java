@@ -15,7 +15,7 @@ public class B2562 {
         int index = 0;
 
         for (int value : number){
-            count++;
+            count+;
 
             if (value > max){
                 max = value;
