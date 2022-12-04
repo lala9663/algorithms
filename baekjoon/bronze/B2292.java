@@ -10,7 +10,7 @@ public class B2292 {
         int count = 1;
         int range = 2;
 
-        if(N == 11){
+        if(N == 1){
             System.out.println(1);
         }else {
             while (range<=N){
