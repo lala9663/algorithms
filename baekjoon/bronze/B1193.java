@@ -10,7 +10,7 @@ public class B1193 {
         int n=0;
         int top=1;
         int bot=1;
-        int cnt=0;
+        int cnt=1;
         if(X==1) {
             System.out.println("1/1");
         }else {
