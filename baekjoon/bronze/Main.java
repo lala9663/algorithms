@@ -19,7 +19,7 @@ public class Main {
             }
             if (c == m) {
                 r = i;
-                break;dd
+                break;
             }
         }
         System.out.println(r);
