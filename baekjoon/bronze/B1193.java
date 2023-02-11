@@ -16,7 +16,7 @@ public class B1193 {
         }else {
             while(cnt<X){
                 n++;
-                cnt=n*(n+1)/2; //몇번 째 행인지 찾는 코드
+                cnt=n*(n+1)/2; d//몇번 째 행인지 찾는 코드
             }
             int num=X-(n-1)*n/2;  //행의 몇번 째 값인지 찾는 코드
             if(n%2==0) {  //짝수 행일 시
