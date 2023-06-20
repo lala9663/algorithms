@@ -1,0 +1,17 @@
+class Solution {
+    public String solution(String my_string, int[][] queries) {
+        int start = 0;
+        int end = 0;
+        char[] arr = my_string.toCharArray();        
+        for(int i = 0; i < queries.length; i++){
+            start = queries[i][0];
+            end = queries[i][1];
+            for (int j = start; j <= (start+end)/2; j++) {
+                char temp = arr[j];
+                arr[j] = arr[start+end-j];
+                arr[start+end-j] = temp;
+            }
+        }
+        return new String(arr);
+    }
+}
