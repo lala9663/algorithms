@@ -3,10 +3,10 @@ import java.util.List;
 
 class Solution {
     public int[] solution(int[] progresses, int[] speeds) {
-        List<Integer> result = new ArrayList<>(); // 배포별 개수를 저장할 동적 배열
+        List<Integer> result = new ArrayList<>();
         
-        int[] a = new int[progresses.length];  // 남은 작업 %
-        int[] b = new int[progresses.length];  // 작업량을 day로 바꾼 것
+        int[] a = new int[progresses.length];  
+        int[] b = new int[progresses.length];  
         int day = 0;
         
         for (int i = 0; i < progresses.length; i++) {
@@ -19,8 +19,8 @@ class Solution {
     }
 }
         
-        int count = 0; // 현재 배포별 기능 개수 카운트
-        int currentDay = b[0]; // 현재 배포 일수
+        int count = 0; 
+        int currentDay = b[0]; 
         
         for (int i = 0; i < progresses.length; i++) {
             if (b[i] <= currentDay) {
