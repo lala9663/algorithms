@@ -26,13 +26,13 @@ class Solution {
             if (b[i] <= currentDay) {
                 count++;
             } else {
-                result.add(count); // 배포별 기능 개수 저장
-                count = 1; // 새로운 배포일에 첫 번째 기능 개수로 초기화
-                currentDay = b[i]; // 배포 일수 갱신
+                result.add(count); 
+                count = 1;
+                currentDay = b[i]; 
             }
         }
         
-        result.add(count); // 마지막 배포에 대한 기능 개수 저장
+        result.add(count);
         
         int[] answer = new int[result.size()];
         
