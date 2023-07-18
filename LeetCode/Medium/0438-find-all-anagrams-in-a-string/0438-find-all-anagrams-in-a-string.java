@@ -1,40 +1,40 @@
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.Arrays;
 import java.util.List;
-import java.util.Map;
 
 class Solution {
     public List<Integer> findAnagrams(String s, String p) {
         List<Integer> result = new ArrayList<>();
 
-        if (s.length() < p.length())
-            return result;
+        int[] pFreq = new int[26]; // 알파벳 빈도수 배열
 
-        int[] target = new int[26];
-        for (char c : p.toCharArray())
-            target[c - 'a']++;
+        // p 문자열의 각 문자에 대한 빈도수 계산
+        for (char ch : p.toCharArray()) {
+            pFreq[ch - 'a']++;
+        }
 
-        int[] count = new int[26];
-        for (int i = 0; i < p.length() - 1; i++)
-            count[s.charAt(i) - 'a']++;
+        int left = 0;
+        int right = 0;
+        int[] sFreq = new int[26]; // s 문자열의 현재 윈도우 내 빈도수 배열
 
-        for (int i = p.length() - 1; i < s.length(); i++) {
-            count[s.charAt(i) - 'a']++;
+        while (right < s.length()) {
+            // 현재 문자 빈도수 증가
+            sFreq[s.charAt(right) - 'a']++;
 
-            if (isAnagram(target, count))
-                result.add(i - p.length() + 1);
+            // 윈도우 크기가 p 문자열과 동일할 때
+            if (right - left + 1 == p.length()) {
+                // 애너그램 여부 확인
+                if (Arrays.equals(sFreq, pFreq)) {
+                    result.add(left);
+                }
+                // 왼쪽 문자 빈도수 감소
+                sFreq[s.charAt(left) - 'a']--;
+                left++;
+            }
 
-            count[s.charAt(i - p.length() + 1) - 'a']--;
+            right++;
         }
 
         return result;
-    }
-
-    private boolean isAnagram(int[] target, int[] count) {
-        for (int i = 0; i < 26; i++) {
-            if (target[i] != count[i])
-                return false;
-        }
-        return true;
     }
 }
